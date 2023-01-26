@@ -1,0 +1,30 @@
+.hero {
+  text-align: center;
+}
+
+.title-one {
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 240px;
+
+  color: $primary-white-color;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1.61;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  @media (min-width: 479px) {
+     font-size: 26px;
+     line-height: 1.36;
+     max-width: 360px;
+  }
+
+  @media (min-width: 1200px) {
+     font-size: 44px;
+     line-height: 1.36;
+     max-width: 696px;
+  }
+}
