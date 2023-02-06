@@ -1,8 +1,14 @@
-const message = 'Curabitur ligula sapien';
-const maxLength = 16;
-let result;
+length;
+/*
+ * Напиши функцию logItems(items) для перебора и логирования массива
+ */
 
-console.log(message.length);
-result = message.slice(0, maxLength) + "...";
-console.log(result);
+const logItems = function (items) {
+  for (const item of items) {
+    console.log(item);
+  }
+};
 
+logItems(['Mango', 'Kiwi', 'Poly', 'Ajax']);
+logItems([1, 2, 3, 4, 5]);
+logItems(['клавиатура', 'наушники', 'часы']);
