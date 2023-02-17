@@ -1,15 +1,28 @@
-function calculateTotal(number) {
- // Change code below this line
-  let sum = number;
-  let num = 0;
-  for (let i = 0; i < number || num < 0; i++) {
-  sum = sum + num;
-  num = number - 1;
-  }
-  console.log(sum);
-  return sum;
-  
-  // Change code above this line
+
+// const string = 'qWeRTzxCv dhfhj fj jjk';
+// const letters = string.split(' ');
+// let invertedString = '';
+
+// console.log(letters);
+// console.table(letters);
+
+// letters.splice(1, 1, 16, 55);
+// console.table(letters);
+
+// for (const letter of letters) {
+//   console.log(letter);
+// }
+function createArrayOfNumbers(min, max) {
+  const numbers = [];
+  // Change code below this line
+for (let i=min; i<=max; i+=1) {
+numbers.push(i);
+  console.log(numbers);
 }
-calculateTotal(7);
-  // console.log(calculateTotal(21));
+  // Change code above this line
+  return numbers;
+}
+console.log(createArrayOfNumbers(1, 3));
+console.log(createArrayOfNumbers(14, 17));
+
+
