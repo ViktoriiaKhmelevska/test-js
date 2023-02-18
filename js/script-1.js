@@ -1,28 +1,80 @@
 
-// const string = 'qWeRTzxCv dhfhj fj jjk';
-// const letters = string.split(' ');
-// let invertedString = '';
+// // const string = 'qWeRTzxCv dhfhj fj jjk';
+// // const letters = string.split(' ');
+// // let invertedString = '';
 
-// console.log(letters);
-// console.table(letters);
+// // console.log(letters);
+// // console.table(letters);
 
-// letters.splice(1, 1, 16, 55);
-// console.table(letters);
+// // letters.splice(1, 1, 16, 55);
+// // console.table(letters);
 
-// for (const letter of letters) {
-//   console.log(letter);
+// // for (const letter of letters) {
+// //   console.log(letter);
+// // }
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
+//   // Change code below this line
+// for (let i=min; i<=max; i+=1) {
+// numbers.push(i);
+//   console.log(numbers);
 // }
-function createArrayOfNumbers(min, max) {
-  const numbers = [];
+//   // Change code above this line
+//   return numbers;
+// }
+// console.log(createArrayOfNumbers(1, 3));
+// console.log(createArrayOfNumbers(14, 17));
+
+// function filterArray(numbers, value) {
+//    // Change code below this line
+//   const numbersBigger = [];
+// for (let i=0; i<numbers.length; i+=1) {
+//   if (numbers[i]>value){
+//     numbersBigger.push(numbers[i]);
+//   }
+// }
+// return numbersBigger
+
+//   // Change code above this line
+// }
+// console.log(filterArray([1, 9, 3, 4, 5], 3));
+
+
+// function checkFruit(fruit) {
+//   const fruits = ["apple", "plum", "pear", "orange"];
+//   if (fruits.includes(fruit)) {
+//     return "true";
+//   }
+//   return "false";
+// }
+// console.log()
+// console.log(checkFruit('mandarin'));
+
+// function getCommonElements(array1, array2) {
+//   // Change code below this line
+//   const arrayInclude = [];
+// for (let i=0; i<array1.length && i<array2.length; i+=1) {
+//   if (array1.includes(array2[i])) {
+//     arrayInclude.push(array2[i])
+//   }
+// }
+//   return arrayInclude;
+
+
+// }
+// console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
+// console.log(getCommonElements([1, 2, 3], [10, 20, 30]));
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
+
+function includes(array, value) {
   // Change code below this line
-for (let i=min; i<=max; i+=1) {
-numbers.push(i);
-  console.log(numbers);
+for (let i = 0; i < array.length; i++) {
+  if (array[i]===value) {
+    return "false";
+  }
+  return "true";
 }
   // Change code above this line
-  return numbers;
 }
-console.log(createArrayOfNumbers(1, 3));
-console.log(createArrayOfNumbers(14, 17));
-
-
+console.log(includes(['Earth', 'Mars', 'Venus', 'Jupiter', 'Saturn'], 'Jupiter'));
+console.log(includes([3, 2, 3, 4, 5], 3));
