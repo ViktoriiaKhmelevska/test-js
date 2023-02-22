@@ -66,15 +66,38 @@
 // console.log(getCommonElements([1, 2, 3], [10, 20, 30]));
 // console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
 
-function includes(array, value) {
+// function includes(array, value) {
   // Change code below this line
-for (let i = 0; i < array.length; i++) {
-  if (array[i]===value) {
-    return "false";
+// for (let i = 0; i < array.length; i++) {
+//   if (array[i]===value) {
+//     return "false";
+//   }
+//   return "true";
+// }
+//   // Change code above this line
+// }
+// console.log(includes(['Earth', 'Mars', 'Venus', 'Jupiter', 'Saturn'], 'Jupiter'));
+// console.log(includes([3, 2, 3, 4, 5], 3));
+  
+const colors = [
+  { hex: "#f44336", rgb: "244,67,54" },
+  { hex: "#2196f3", rgb: "33,150,243" },
+  { hex: "#4caf50", rgb: "76,175,80" },
+  { hex: "#ffeb3b", rgb: "255,235,59" },
+];
+
+const hexColors = [];
+const rgbColors = [];
+// Change code below this line
+
+  // // const cc = Object.values(colors.hex);
+  // console.log(cc);
+  for (let i = 0; i < colors.length; i += 1) {
+    hexColors.push(colors[i].hex);
+    rgbColors.push(colors[i].rgb);
+    // console.log(hexColors);
+    // console.log(rgbColors);
   }
-  return "true";
-}
-  // Change code above this line
-}
-console.log(includes(['Earth', 'Mars', 'Venus', 'Jupiter', 'Saturn'], 'Jupiter'));
-console.log(includes([3, 2, 3, 4, 5], 3));
+
+   console.log(hexColors);
+    console.log(rgbColors);
