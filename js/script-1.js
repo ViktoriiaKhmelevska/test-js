@@ -233,54 +233,87 @@
 // atTheOldToad.removePotion("Dragon breath");
 // console.log(atTheOldToad.potions);
     
-const atTheOldToad = {
-  potions: [
-    { name: "Speed potion", price: 460 },
-    { name: "Dragon breath", price: 780 },
-    { name: "Stone skin", price: 520 },
-  ],
-  // Change code below this line
-  getPotions() {
-    return this.potions;
-  },
-  addPotion(newPotion) {
-    for (const potion of this.potions) { 
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     for (const potion of this.potions) { 
     
-    if (potion.name === newPotion.name) {
-      return `Error! Potion ${newPotion.name} is already in your inventory!`;
-    }
-    this.potions.push(newPotion);
-  }
-},
-  removePotion(potionName) {
-    const potionIndex = this.potions.indexOf(potionName);
+//     if (potion.name === newPotion.name) {
+//       return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//     }
+//     this.potions.push(newPotion);
+//   }
+// },
+//   removePotion(potionName) {
+//     const potionIndex = this.potions.indexOf(potionName);
 
-    if (potionIndex === -1) {
-      return `Potion ${potionName} is not in inventory!`;
-    }
+//     if (potionIndex === -1) {
+//       return `Potion ${potionName} is not in inventory!`;
+//     }
 
-    this.potions.splice(potionIndex, 1);
-  },
-  // updatePotionName(oldName, newName) {
-  //   const potionIndex = this.potions.indexOf(oldName);
+//     this.potions.splice(potionIndex, 1);
+//   },
+//   // updatePotionName(oldName, newName) {
+//   //   const potionIndex = this.potions.indexOf(oldName);
 
-  //   if (potionIndex === -1) {
-  //     return `Potion ${oldName} is not in inventory!`;
-  //   }
+//   //   if (potionIndex === -1) {
+//   //     return `Potion ${oldName} is not in inventory!`;
+//   //   }
 
-  //   this.potions.splice(potionIndex, 1, newName);
-  // },
-    updatePotionName(oldName, newName) {
-     for (let i=0; i<this.potions.length; i+=1){
-      const potion = this.potions[i];
-    if (potion.name === oldName) {
-      this.potions.splice([i], 1);
-       }
-        return this.potions;
-    }
-  // return `Potion ${oldName} is not in inventory!`;
-  },
-  // Change code above this line
+//   //   this.potions.splice(potionIndex, 1, newName);
+//   // },
+//     updatePotionName(oldName, newName) {
+//      for (let i=0; i<this.potions.length; i+=1){
+//       const potion = this.potions[i];
+//     if (potion.name === oldName) {
+//       this.potions.splice([i], 1);
+//        }
+//         return this.potions;
+//     }
+//   // return `Potion ${oldName} is not in inventory!`;
+//   },
+//   // Change code above this line
+// };
+// console.log(atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion"));
+// console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
+
+// // Колбек-функція
+// function greet(name) {
+//   console.log(`Ласкаво просимо ${name}.`);
+// }
+
+// // Функція вищого порядку
+// function registerGuest(name, callback) {
+//   console.log(`Реєструємо гостя ${name}.`);
+//   callback(name);
+// }
+
+// registerGuest("Манго", greet);
+
+// const numbers = [5, 10, 15, 20, 25];
+
+// // Оголошення функції
+// numbers.forEach(function (number, index) {
+//   console.log(`Індекс ${index}, значення ${number}`);
+// });
+
+// // Анонімна стрілочна функція
+// numbers.forEach((number, index) => {
+//   console.log(`Індекс ${index}, значення ${number}`);
+// });
+
+const numbers = [5, 10, 15, 20, 25];
+
+const logMessage = (number, index) => {
+  console.log(`Індекс ${index}, значення ${number}`);
 };
-console.log(atTheOldToad.updatePotionName("Stone skin", "Invulnerability potion"));
-console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"));
+
+numbers.forEach(logMessage);
