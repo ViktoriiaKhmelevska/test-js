@@ -310,10 +310,182 @@
 //   console.log(`Індекс ${index}, значення ${number}`);
 // });
 
-const numbers = [5, 10, 15, 20, 25];
+// const numbers = [5, 10, 15, 20, 25];
 
-const logMessage = (number, index) => {
-  console.log(`Індекс ${index}, значення ${number}`);
-};
+// const logMessage = (number, index) => {
+//   console.log(`Індекс ${index}, значення ${number}`);
+// };
 
-numbers.forEach(logMessage);
+// numbers.forEach(logMessage);
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+// //     for (const potion of this.potions) { 
+// //     if (potion.name === newPotion.name) {
+// //       return `Error! Potion ${newPotion.name} is already in your inventory!`;
+// //     }
+// //     }
+// //     this.potions.push(newPotion);
+// // },
+// //     removePotion(potionName) {
+// //      for (let i=0; i<this.potions.length; i+=1) { 
+// //     const potion = this.potions[i];
+// //     if (potion.name === potionName) {
+// //        this.potions.splice(i, 1);
+// //          }
+// //      }
+// //     return `Potion ${potionName} is not in inventory!`;
+// //   },
+// //    updatePotionName(oldName, newName) {
+// //      for (let i=0; i<this.potions.length; i+=1) {
+// //      if (this.potions[i].name===oldName) {
+// //       this.potions[i].name=newName;
+// //       return;
+// //     }
+// //   }
+// //   // Change code above this line
+// // }
+// // };
+// // atTheOldToad.updatePotionName('Stone skin', 'Invulnerability potion');
+// // console.log(atTheOldToad.potions);
+
+// // const isRecipientAvailable = Math.random() > 0.5;
+// // console.log(isRecipientAvailable)
+ 
+// // const students = [
+// //   { name: "Манго", courses: ["математика", "фізика"] },
+// //   { name: "Полі", courses: ["інформатика", "математика"] },
+// //   { name: "Ківі", courses: ["фізика", "біологія"] },
+// // ];
+
+// // const allCourses = students.flatMap(student => student.courses);
+// // console.log(allCourses);
+
+// // const uniqueCourses = allCourses.filter(
+// //   (course, index, array) => array.indexOf(course) === index
+// // );
+// // console.log(uniqueCourses);
+
+// // const LOW_SCORE = 50;
+// // const HIGH_SCORE = 80;
+// // const students = [
+// //   { name: "Манго", score: 83 },
+// //   { name: "Полі", score: 59 },
+// //   { name: "Аякс", score: 37 },
+// //   { name: "Ківі", score: 94 },
+// //   { name: "Х'юстон", score: 64 },
+// // ];
+
+// // const best = students.filter(student => student.score >= HIGH_SCORE);
+// // console.log(best); // Масив об'єктів з іменами Манго і Ківі
+
+// // const worst = students.filter(student => student.score < LOW_SCORE);
+// // console.log(worst); // Масив з одним об'єктом Аякс
+
+// // // В колбек-функції зручно деструктуризувати властивості об'єкта
+// // const average = students.filter(
+// //   ({ score }) => score >= LOW_SCORE && score < HIGH_SCORE
+// // );
+// // console.log(average); // Масив об'єктів з іменами Полі і Х'юстон
+
+// // const tweets = [
+// //   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+// //   { id: "001", likes: 2, tags: ["html", "css"] },
+// //   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+// //   { id: "003", likes: 8, tags: ["css", "react"] },
+// //   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// // ];
+
+// // // Пройдемо по всіх елементах колекції і додамо значення властивості tags
+// // // до акумулятора, початкове значення якого вкажемо порожнім масивом [].
+// // // На кожній ітерації пушимо в акумулятор усі елементи tweet.tags і повертаємо його.
+// // const tags = tweets.reduce((allTags, tweet) => {
+// //   allTags.push(...tweet.tags);
+
+// //   return allTags;
+// // }, []);
+
+// // console.log(tags);
+
+// // // Мабуть, збирання тегів - не одиночна операція, тому напишемо функцію
+// // // для збирання тегів з колекції
+// // const getTags = tweets =>
+// //   tweets.reduce((allTags, tweet) => {
+// //     allTags.push(...tweet.tags);
+
+// //     return allTags;
+// //   }, []);
+
+// // console.log(getTags(tweets));
+
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
+
+// const getTags = tweets =>
+//   tweets.reduce((allTags, tweet) => {
+//     allTags.push(...tweet.tags);
+
+//     return allTags;
+//   }, []);
+
+// const tags = getTags(tweets);
+
+// // Винесемо callback-функцію окремо, а в reducе передамо посилання на неї.
+// // Це стандартна практика, якщо callback-функція досить велика.
+
+// // Якщо в об'єкті-акумуляторі acc відсутня своя властивість з ключем tag,
+// // то створюємо її і записуємо їй значення 0.
+// // В іншому випадку збільшуємо значення на 1.
+// const getTagStats = (acc, tag) => {
+//   if (!acc.hasOwnProperty(tag)) {
+//     acc[tag] = 0;
+//   }
+
+//   acc[tag] += 1;
+
+//   return acc;
+// };
+
+// // Початкове значення акумулятора - це порожній об'єкт {}
+// const countTags = tags => tags.reduce(getTagStats, {});
+
+// const tagCount = countTags(tags);
+// console.log(tagCount);
+
+
+const students = [
+  { name: "Манго", score: 83 },
+  { name: "Полі", score: 59 },
+  { name: "Аякс", score: 37 },
+  { name: "Ківі", score: 94 },
+];
+
+// const inAscendingScoreOrder = students.sort(
+//   (firstStudent, secondStudent) => firstStudent.score - secondStudent.score
+// );
+
+// const inDescendingScoreOrder = students.sort(
+//   (firstStudent, secondStudent) => secondStudent.score - firstStudent.score
+// );
+
+const inAlphabeticalOrder = students.sort((firstStudent, secondStudent) =>
+  firstStudent.name.localeCompare(secondStudent.name)
+);
+
+// console.log(inAscendingScoreOrder);
+// console.log(inDescendingScoreOrder);
+console.log(inAlphabeticalOrder);
