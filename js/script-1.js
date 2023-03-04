@@ -39,7 +39,6 @@
 // }
 // console.log(filterArray([1, 9, 3, 4, 5], 3));
 
-
 // function checkFruit(fruit) {
 //   const fruits = ["apple", "plum", "pear", "orange"];
 //   if (fruits.includes(fruit)) {
@@ -244,7 +243,7 @@
 //     return this.potions;
 //   },
 //   addPotion(newPotion) {
-//     for (const potion of this.potions) { 
+//     for (const potion of this.potions) {
     
 //     if (potion.name === newPotion.name) {
 //       return `Error! Potion ${newPotion.name} is already in your inventory!`;
@@ -329,7 +328,7 @@
 //     return this.potions;
 //   },
 //   addPotion(newPotion) {
-// //     for (const potion of this.potions) { 
+// //     for (const potion of this.potions) {
 // //     if (potion.name === newPotion.name) {
 // //       return `Error! Potion ${newPotion.name} is already in your inventory!`;
 // //     }
@@ -337,7 +336,7 @@
 // //     this.potions.push(newPotion);
 // // },
 // //     removePotion(potionName) {
-// //      for (let i=0; i<this.potions.length; i+=1) { 
+// //      for (let i=0; i<this.potions.length; i+=1) {
 // //     const potion = this.potions[i];
 // //     if (potion.name === potionName) {
 // //        this.potions.splice(i, 1);
@@ -467,25 +466,247 @@
 // console.log(tagCount);
 
 
-const students = [
-  { name: "Манго", score: 83 },
-  { name: "Полі", score: 59 },
-  { name: "Аякс", score: 37 },
-  { name: "Ківі", score: 94 },
-];
+// const students = [
+//   { name: "Манго", score: 83 },
+//   { name: "Полі", score: 59 },
+//   { name: "Аякс", score: 37 },
+//   { name: "Ківі", score: 94 },
+// ];
 
-// const inAscendingScoreOrder = students.sort(
-//   (firstStudent, secondStudent) => firstStudent.score - secondStudent.score
+// // const inAscendingScoreOrder = students.sort(
+// //   (firstStudent, secondStudent) => firstStudent.score - secondStudent.score
+// // );
+
+// // const inDescendingScoreOrder = students.sort(
+// //   (firstStudent, secondStudent) => secondStudent.score - firstStudent.score
+// // );
+
+// const inAlphabeticalOrder = students.sort((firstStudent, secondStudent) =>
+//   firstStudent.name.localeCompare(secondStudent.name)
 // );
 
-// const inDescendingScoreOrder = students.sort(
-//   (firstStudent, secondStudent) => secondStudent.score - firstStudent.score
-// );
+// // console.log(inAscendingScoreOrder);
+// // console.log(inDescendingScoreOrder);
+// console.log(inAlphabeticalOrder);
 
-const inAlphabeticalOrder = students.sort((firstStudent, secondStudent) =>
-  firstStudent.name.localeCompare(secondStudent.name)
-);
 
-// console.log(inAscendingScoreOrder);
-// console.log(inDescendingScoreOrder);
-console.log(inAlphabeticalOrder);
+// const pizzaPalace = {
+//   pizzas: ["Ultracheese", "Smoked", "Four meats"],
+//   order(pizzaName, onSuccess, onOrderError) {
+//     if(this.pizzas.includes(pizzaName)){
+//       return onSuccess(pizzaName);
+//       }
+//      return onOrderError(`There is no pizza with a name ${pizzaName} in the assortment.`);
+//   }
+// };
+// // Change code above this line
+
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+
+// // Callback for onError
+// function onOrderError(error) {
+//   return `Error! ${error}`;
+// }
+
+// // Method calls with callbacks
+// console.log(pizzaPalace.order("Smoked", makePizza, onOrderError));
+// console.log(pizzaPalace.order("Four meats", makePizza, onOrderError));
+// console.log(pizzaPalace.order("Big Mike", makePizza, onOrderError));
+// console.log(pizzaPalace.order("Vienna", makePizza, onOrderError));
+
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+//   // Change code below this line
+
+//   // for (let i = 0; i < orderedItems.length; i += 1) {
+//   //   totalPrice += orderedItems[i];
+//   // }
+//   orderedItems.forEach(function (number) {
+//     console.log('number', number);
+//     totalPrice += element;
+// });
+  // Change code above this line
+
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+// console.log(calculateTotalPrice([164, 48, 291]));
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+// console.log()
+
+// const numbers = [5, 10, 15, 20, 25];
+
+// // // numbers.forEach(function (number) {
+
+// // //   console.log('number', number);
+// // // });
+
+// const add = (a, b) => a + b;
+// let total = 0;
+// numbers.forEach(item => total = a + b)
+// console.log(total);
+
+// // // function logItems(items) {
+// // //   for (let i = 0; i < items.length; i += 1) {
+// // //     console.log(`${i + 1} - ${items[i]}`);
+// // //   }
+// // // }
+
+// // const logItems = items => items.forEach((item, idx) => console.log(`${idx + 1}- ${item}`))
+
+// // logItems(['Mango', 'Poly', 'Ajax']);
+// // logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
+
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+//   // Change code below this line
+// orderedItems.forEach(element => {
+//   totalPrice += element
+// });
+//   // for (let i = 0; i < orderedItems.length; i += 1) {
+//   //   totalPrice += orderedItems[i];
+//   // }
+  
+
+//   // Change code above this line
+//   return totalPrice;
+// }
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+// console.log(calculateTotalPrice([164, 48, 291]));
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+
+// function filterArray(numbers, value) {
+//   const filteredNumbers = [];
+//   // for (let i = 0; i < numbers.length; i += 1) {
+//   //   if (numbers[i] > value) {
+//   //     filteredNumbers.push(numbers[i]);
+//   //   }
+//   // }
+//   numbers.forEach(element => {
+//     if (element > value) {
+//       filteredNumbers.push(element);
+//     }
+//   });
+//   // Change code above this line
+//   return filteredNumbers;
+// }
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+// console.log(filterArray([12, 24, 8, 41, 76], 38));
+
+// function getCommonElements(firstArray, secondArray) {
+//   const commonElements = [];
+//   // Change code below this line
+// firstArray.forEach(element => {
+//       if (secondArray.includes(element)) {
+//       commonElements.push(element);
+//     }
+//   });
+
+//   return commonElements;
+//   // Change code above this line
+// }
+// console.log(getCommonElements([1, 2, 3], [2, 4]));
+// console.log(getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]));
+// console.log(getCommonElements([1, 2, 3], [10, 20, 30]));
+// console.log();
+
+// function changeEven(numbers, value) {
+//   // Change code below this
+//   const newNumbers = [];
+//   for (let i = 0; i < numbers.length; i += 1) {
+//     if (!(numbers[i] % 2)) {
+//       // newNumbers[i] = numbers[i] + value;
+//       newNumbers.push(numbers[i] + value);
+//     }
+//   }
+//       return newNumbers;
+//   // Change code above this line
+// }
+
+// console.log(changeEven([2, 8, 3, 7, 4, 6], 10));
+
+// const planets = ["Earth", "Mars", "Venus", "Jupiter"];
+// // Change code below this line
+// // const planetsLengths = planets.map(planet => planetsLengths.push(planet.length));
+// // const planetsLengths = planets.map(planet => planets.length());
+// const planetsLengths = planets.map(planet => planet.length);
+// console.log(planetsLengths);
+
+const users = [
+  {
+    name: "Moore Hensley",
+    email: "moorehensley@indexia.com",
+    eyeColor: "blue",
+    friends: ["Sharron Pace"],
+    isActive: false,
+    balance: 2811,
+    gender: "male",
+    age: 37
+  },
+  {
+    name: "Sharlene Bush",
+    email: "sharlenebush@tubesys.com",
+    eyeColor: "blue",
+    friends: ["Briana Decker", "Sharron Pace"],
+    isActive: true,
+    balance: 3821,
+    gender: "female",
+    age: 34
+  },
+  {
+    name: "Ross Vazquez",
+    email: "rossvazquez@xinware.com",
+    eyeColor: "green",
+    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+    isActive: false,
+    balance: 3793,
+    gender: "male",
+    age: 24
+  },
+  {
+    name: "Elma Head",
+    email: "elmahead@omatom.com",
+    eyeColor: "green",
+    friends: ["Goldie Gentry", "Aisha Tran"],
+    isActive: true,
+    balance: 2278,
+    gender: "female",
+    age: 21
+  },
+  {
+    name: "Carey Barr",
+    email: "careybarr@nurali.com",
+    eyeColor: "blue",
+    friends: ["Jordan Sampson", "Eddie Strong"],
+    isActive: true,
+    balance: 3951,
+    gender: "male",
+    age: 27
+  },
+  {
+    name: "Blackburn Dotson",
+    email: "blackburndotson@furnigeer.com",
+    eyeColor: "brown",
+    friends: ["Jacklyn Lucas", "Linda Chapman"],
+    isActive: false,
+    balance: 1498,
+    gender: "male",
+    age: 38
+  },
+  {
+    name: "Sheree Anthony",
+    email: "shereeanthony@kog.com",
+    eyeColor: "brown",
+    friends: ["Goldie Gentry", "Briana Decker"],
+    isActive: true,
+    balance: 2764,
+    gender: "female",
+    age: 39
+  }
+]
+
+// Change code below this line
+const getUsersWithFriend = (users, friendName) => users.filter(user => user.friendName===friendName);
+// Change code above this line
+console.log(getUsersWithFriend(users, 'Briana Decker'));
