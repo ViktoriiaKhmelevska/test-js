@@ -633,6 +633,118 @@
 // const planetsLengths = planets.map(planet => planet.length);
 // console.log(planetsLengths);
 
+// const users = [
+//   {
+//     name: "Moore Hensley",
+//     email: "moorehensley@indexia.com",
+//     eyeColor: "blue",
+//     friends: ["Sharron Pace"],
+//     isActive: false,
+//     balance: 2811,
+//     gender: "male",
+//     age: 37
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     email: "sharlenebush@tubesys.com",
+//     eyeColor: "blue",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     isActive: true,
+//     balance: 3821,
+//     gender: "female",
+//     age: 34
+//   },
+//   {
+//     name: "Ross Vazquez",
+//     email: "rossvazquez@xinware.com",
+//     eyeColor: "green",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     isActive: false,
+//     balance: 3793,
+//     gender: "male",
+//     age: 24
+//   },
+//   {
+//     name: "Elma Head",
+//     email: "elmahead@omatom.com",
+//     eyeColor: "green",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     isActive: true,
+//     balance: 2278,
+//     gender: "female",
+//     age: 21
+//   },
+//   {
+//     name: "Carey Barr",
+//     email: "careybarr@nurali.com",
+//     eyeColor: "blue",
+//     friends: ["Jordan Sampson", "Eddie Strong"],
+//     isActive: true,
+//     balance: 3951,
+//     gender: "male",
+//     age: 27
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     email: "blackburndotson@furnigeer.com",
+//     eyeColor: "brown",
+//     friends: ["Jacklyn Lucas", "Linda Chapman"],
+//     isActive: false,
+//     balance: 1498,
+//     gender: "male",
+//     age: 38
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     email: "shereeanthony@kog.com",
+//     eyeColor: "brown",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     isActive: true,
+//     balance: 2764,
+//     gender: "female",
+//     age: 39
+//   }
+// ]
+
+// // Change code below this line
+// const getUsersWithFriend = (users, friendName) => users.filter(user => user.friendName===friendName);
+// // Change code above this line
+// console.log(getUsersWithFriend(users, 'Briana Decker'));
+
+// const getUserWithEmail = (users, email) => users.find(user => users.email === email);
+// // Change code above this line
+// console.log(getUserWithEmail(users, "shereeanthony@kog.com"));
+
+
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Change code below this line
+
+// const eachElementInFirstIsEven = firstArray.every(value => !(value%2));
+// const eachElementInFirstIsOdd = firstArray.every((value) => value%2 === false);
+// const eachElementInSecondIsEven = secondArray.every((value) => value%2 === true);
+// const eachElementInSecondIsOdd = secondArray.every((value) => value%2 === false);
+
+// const eachElementInThirdIsEven = thirdArray.every((value) => value%2 === true);
+// const eachElementInThirdIsOdd = thirdArray.every((value) => value % 2 === false);
+// console.log(eachElementInFirstIsEven);
+// console.log(eachElementInFirstIsOdd);
+// console.log(eachElementInSecondIsOdd);
+
+// const players = [
+//   { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//   { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//   { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//   { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+// // Change code below this line
+// const totalPlaytimePerGame = players.reduce((acc, player) => {
+//   return acc + (player.playtime*player.gamesPlayed);
+// }, 0);
+// const totalAveragePlaytimePerGame = totalPlaytimePerGame / players.length;
+
+// console.log(totalAveragePlaytimePerGame);
 const users = [
   {
     name: "Moore Hensley",
@@ -641,8 +753,7 @@ const users = [
     friends: ["Sharron Pace"],
     isActive: false,
     balance: 2811,
-    gender: "male",
-    age: 37
+    gender: "male"
   },
   {
     name: "Sharlene Bush",
@@ -651,8 +762,7 @@ const users = [
     friends: ["Briana Decker", "Sharron Pace"],
     isActive: true,
     balance: 3821,
-    gender: "female",
-    age: 34
+    gender: "female"
   },
   {
     name: "Ross Vazquez",
@@ -661,8 +771,7 @@ const users = [
     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
     isActive: false,
     balance: 3793,
-    gender: "male",
-    age: 24
+    gender: "male"
   },
   {
     name: "Elma Head",
@@ -671,8 +780,7 @@ const users = [
     friends: ["Goldie Gentry", "Aisha Tran"],
     isActive: true,
     balance: 2278,
-    gender: "female",
-    age: 21
+    gender: "female"
   },
   {
     name: "Carey Barr",
@@ -681,8 +789,7 @@ const users = [
     friends: ["Jordan Sampson", "Eddie Strong"],
     isActive: true,
     balance: 3951,
-    gender: "male",
-    age: 27
+    gender: "male"
   },
   {
     name: "Blackburn Dotson",
@@ -691,8 +798,7 @@ const users = [
     friends: ["Jacklyn Lucas", "Linda Chapman"],
     isActive: false,
     balance: 1498,
-    gender: "male",
-    age: 38
+    gender: "male"
   },
   {
     name: "Sheree Anthony",
@@ -701,12 +807,74 @@ const users = [
     friends: ["Goldie Gentry", "Briana Decker"],
     isActive: true,
     balance: 2764,
-    gender: "female",
-    age: 39
+    gender: "female"
   }
-]
+];
+// // const getTotalFriendCount = users => users.reduce((total, user) => [...total, ...user.friends], []);
+// let array = users.flatMap(user => user.friends);
+// let array = users.flatMap(user => user.friends);
 
-// Change code below this line
-const getUsersWithFriend = (users, friendName) => users.filter(user => user.friendName===friendName);
+// console.log(array.length);
+// // array.reduce((total, user) => (acc, user) => {
+//   return {
+//     ...acc,
+//     [tag]: acc[tag] ? acc[tag] + 1 : 1,
+//   };
+// console.log(getTotalFriendCount(users));
+
+// // Change code below this line
+// const tagsStats = allTags.reduce((acc, tag) => {
+//   return {
+//     ...acc,
+//     [tag]: acc[tag] ? acc[tag] + 1 : 1,
+//   };
+// }, {});
 // Change code above this line
-console.log(getUsersWithFriend(users, 'Briana Decker'));
+// console.log(getTotalFriendCount(users));
+
+// const tweets = [
+//   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//   { id: '001', likes: 2, tags: ['html', 'css'] },
+//   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//   { id: '003', likes: 8, tags: ['css', 'react'] },
+//   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
+
+// const allTags = tweets.reduce((acc, tweet) => [...acc, ...tweet.tags], []);
+// console.log(allTags);
+
+// acc = [], tweet.tags = ['js', 'nodejs'] return [...[], ...['js', 'nodejs']]
+// acc = ['js', 'nodejs'] tweet.tags ['html', 'css']
+// return  [...['js', 'nodejs'], ...['html', 'css']]
+//  ['js', 'nodejs', 'html', 'css']
+
+/*
+ * Ведём статистику тегов
+ */
+// const tagsStats = allTags.reduce((acc, tag) => {
+//   console.log(acc);
+
+//   if (acc[tag]) {
+//     acc[tag] += 1;
+
+//     return acc;
+//   }
+
+//   acc[tag] = 1;
+
+//   return acc;
+// }, {});
+
+// const tagsStats = allTags.reduce((acc, tag) => {
+//   return {
+//     ...acc,
+//     [tag]: acc[tag] ? acc[tag] + 1 : 1,
+//   };
+// }, {});
+// console.log(tagsStats);
+const getTotalFriendCount = users => users.reduce((total, user) => {
+   total.push(...user.friends);
+  return total;
+},
+[]).length;
+console.log(getTotalFriendCount(users));
