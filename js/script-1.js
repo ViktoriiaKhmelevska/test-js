@@ -745,6 +745,197 @@
 // const totalAveragePlaytimePerGame = totalPlaytimePerGame / players.length;
 
 // console.log(totalAveragePlaytimePerGame);
+// const users = [
+//   {
+//     name: "Moore Hensley",
+//     email: "moorehensley@indexia.com",
+//     eyeColor: "blue",
+//     friends: ["Sharron Pace"],
+//     isActive: false,
+//     balance: 2811,
+//     gender: "male"
+//   },
+//   {
+//     name: "Sharlene Bush",
+//     email: "sharlenebush@tubesys.com",
+//     eyeColor: "blue",
+//     friends: ["Briana Decker", "Sharron Pace"],
+//     isActive: true,
+//     balance: 3821,
+//     gender: "female"
+//   },
+//   {
+//     name: "Ross Vazquez",
+//     email: "rossvazquez@xinware.com",
+//     eyeColor: "green",
+//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+//     isActive: false,
+//     balance: 3793,
+//     gender: "male"
+//   },
+//   {
+//     name: "Elma Head",
+//     email: "elmahead@omatom.com",
+//     eyeColor: "green",
+//     friends: ["Goldie Gentry", "Aisha Tran"],
+//     isActive: true,
+//     balance: 2278,
+//     gender: "female"
+//   },
+//   {
+//     name: "Carey Barr",
+//     email: "careybarr@nurali.com",
+//     eyeColor: "blue",
+//     friends: ["Jordan Sampson", "Eddie Strong"],
+//     isActive: true,
+//     balance: 3951,
+//     gender: "male"
+//   },
+//   {
+//     name: "Blackburn Dotson",
+//     email: "blackburndotson@furnigeer.com",
+//     eyeColor: "brown",
+//     friends: ["Jacklyn Lucas", "Linda Chapman"],
+//     isActive: false,
+//     balance: 1498,
+//     gender: "male"
+//   },
+//   {
+//     name: "Sheree Anthony",
+//     email: "shereeanthony@kog.com",
+//     eyeColor: "brown",
+//     friends: ["Goldie Gentry", "Briana Decker"],
+//     isActive: true,
+//     balance: 2764,
+//     gender: "female"
+//   }
+// ];
+// // const getTotalFriendCount = users => users.reduce((total, user) => [...total, ...user.friends], []);
+// let array = users.flatMap(user => user.friends);
+// let array = users.flatMap(user => user.friends);
+
+// console.log(array.length);
+// // array.reduce((total, user) => (acc, user) => {
+//   return {
+//     ...acc,
+//     [tag]: acc[tag] ? acc[tag] + 1 : 1,
+//   };
+// console.log(getTotalFriendCount(users));
+
+// // Change code below this line
+// const tagsStats = allTags.reduce((acc, tag) => {
+//   return {
+//     ...acc,
+//     [tag]: acc[tag] ? acc[tag] + 1 : 1,
+//   };
+// }, {});
+// Change code above this line
+// console.log(getTotalFriendCount(users));
+
+// const tweets = [
+//   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
+//   { id: '001', likes: 2, tags: ['html', 'css'] },
+//   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
+//   { id: '003', likes: 8, tags: ['css', 'react'] },
+//   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+// ];
+
+// const allTags = tweets.reduce((acc, tweet) => [...acc, ...tweet.tags], []);
+// console.log(allTags);
+
+// acc = [], tweet.tags = ['js', 'nodejs'] return [...[], ...['js', 'nodejs']]
+// acc = ['js', 'nodejs'] tweet.tags ['html', 'css']
+// return  [...['js', 'nodejs'], ...['html', 'css']]
+//  ['js', 'nodejs', 'html', 'css']
+
+/*
+ * Ведём статистику тегов
+ */
+// const tagsStats = allTags.reduce((acc, tag) => {
+//   console.log(acc);
+
+//   if (acc[tag]) {
+//     acc[tag] += 1;
+
+//     return acc;
+//   }
+
+//   acc[tag] = 1;
+
+//   return acc;
+// }, {});
+
+// const tagsStats = allTags.reduce((acc, tag) => {
+//   return {
+//     ...acc,
+//     [tag]: acc[tag] ? acc[tag] + 1 : 1,
+//   };
+// }, {});
+// console.log(tagsStats);
+// const getTotalFriendCount = users => users.reduce((total, user) => {
+//    total.push(...user.friends);
+//   return total;
+// },
+// []).length;
+// console.log(getTotalFriendCount(users));
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 838,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 851,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 775,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 794 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 867 },
+// ];
+// // Change code below this line
+
+// const sortedByAuthorName = [...books].sort((firstBook, secondBook) =>
+//   firstBook.author.localeCompare(secondBook.author));
+
+// const sortedByReversedAuthorName = [...books].sort((firstBook, secondBook) =>
+//   secondBook.author.localeCompare(firstBook.author));
+
+// const sortedByAscendingRating = [...books].sort((firstBook, secondBook) => secondBook.rating - firstBook.rating);
+
+// const sortedByDescentingRating = [...books].sort((firstBook, secondBook) => secondBook.rating - firstBook.rating);
+
+
+
+// const students = [
+//   { name: "Mango", score: 83 },
+//   { name: "Poly", score: 59 },
+//   { name: "Ajax", score: 37 },
+//   { name: "Kiwi", score: 94 },
+// ];
+
+// const inAscendingScoreOrder = [...students].sort(
+//   (firstStudent, secondStudent) => firstStudent.score - secondStudent.score
+// );
+
+// const inDescendingScoreOrder = [...students].sort(
+//   (firstStudent, secondStudent) => secondStudent.score - firstStudent.score
+// );
+
+// const inAlphabeticalOrder = [...students].sort((firstStudent, secondStudent) =>
+//   firstStudent.name.localeCompare(secondStudent.name)
+// );
+
+// console.log(sortedByAuthorName);
+// console.log(sortedByReversedAuthorName);
+// console.log(sortedByAscendingRating);
+// console.log(sortedByDescentingRating);
+
 const users = [
   {
     name: "Moore Hensley",
@@ -810,71 +1001,81 @@ const users = [
     gender: "female"
   }
 ];
-// // const getTotalFriendCount = users => users.reduce((total, user) => [...total, ...user.friends], []);
-// let array = users.flatMap(user => user.friends);
-// let array = users.flatMap(user => user.friends);
 
-// console.log(array.length);
-// // array.reduce((total, user) => (acc, user) => {
-//   return {
-//     ...acc,
-//     [tag]: acc[tag] ? acc[tag] + 1 : 1,
-//   };
-// console.log(getTotalFriendCount(users));
+// const sortByDescendingFriendCount = users => {
+//   return [...users].sort((firstUser, secondUser) => firstUser.friends.length - secondUser.friends.length);
+// };
 
-// // Change code below this line
-// const tagsStats = allTags.reduce((acc, tag) => {
-//   return {
-//     ...acc,
-//     [tag]: acc[tag] ? acc[tag] + 1 : 1,
-//   };
-// }, {});
-// Change code above this line
-// console.log(getTotalFriendCount(users));
+// console.log(sortByDescendingFriendCount(users));
 
-// const tweets = [
-//   { id: '000', likes: 5, tags: ['js', 'nodejs'] },
-//   { id: '001', likes: 2, tags: ['html', 'css'] },
-//   { id: '002', likes: 17, tags: ['html', 'js', 'nodejs'] },
-//   { id: '003', likes: 8, tags: ['css', 'react'] },
-//   { id: '004', likes: 0, tags: ['js', 'nodejs', 'react'] },
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   {
+//     title: "The Dreams in the Witch House",
+//     author: "Howard Lovecraft",
+//     rating: 8.67,
+//   },
 // ];
+// const MIN_BOOK_RATING = 8;
+// // Change code below this line
 
-// const allTags = tweets.reduce((acc, tweet) => [...acc, ...tweet.tags], []);
-// console.log(allTags);
+// const names =[...books].sort((firstUser, secondUser) =>
+//   firstUser.author.localeCompare(secondUser.author))
+//   .filter(book => book.rating > )
+//   .map(book => book.author);
+   
+// const getNamesSortedByFriendCount = users => 
+// [...users].sort((firstUser, secondUser) => secondUser.friends.length - firstUser.friends.length)
+//     .map(user => user.name);
+// console.log(getNamesSortedByFriendCount(users));
+  
+// const getTotalBalanceByGender = (users, gender) => 
+// users.filter(user => user.gender === gender)
+//   .reduce((acc, user) => acc + user.balance, 0);
 
-// acc = [], tweet.tags = ['js', 'nodejs'] return [...[], ...['js', 'nodejs']]
-// acc = ['js', 'nodejs'] tweet.tags ['html', 'css']
-// return  [...['js', 'nodejs'], ...['html', 'css']]
-//  ['js', 'nodejs', 'html', 'css']
+//   console.log(getTotalBalanceByGender(users, 'male'));
 
-/*
- * Ведём статистику тегов
- */
-// const tagsStats = allTags.reduce((acc, tag) => {
-//   console.log(acc);
+class Storage {
+  constructor(items) {
+     this.items = items;
+  }
+  getItems() {
+    return this.items
+  }
 
-//   if (acc[tag]) {
-//     acc[tag] += 1;
+  addItem(newItem) {
+    return this.items.push(newItem)
+  }
 
-//     return acc;
-//   }
+  removeItem(itemToRemove) {
+    const elem =
+      this.items.filter(item => (item !== itemToRemove));
+    return elem
+  }
+}
 
-//   acc[tag] = 1;
 
-//   return acc;
-// }, {});
+// Change code above this line
+const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+storage.addItem("Droid");
+console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+storage.removeItem("Prolonger");
+console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 
-// const tagsStats = allTags.reduce((acc, tag) => {
-//   return {
-//     ...acc,
-//     [tag]: acc[tag] ? acc[tag] + 1 : 1,
-//   };
-// }, {});
-// console.log(tagsStats);
-const getTotalFriendCount = users => users.reduce((total, user) => {
-   total.push(...user.friends);
-  return total;
-},
-[]).length;
-console.log(getTotalFriendCount(users));
