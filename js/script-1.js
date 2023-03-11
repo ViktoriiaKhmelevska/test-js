@@ -1040,42 +1040,152 @@ const users = [
 //   .filter(book => book.rating > )
 //   .map(book => book.author);
    
-// const getNamesSortedByFriendCount = users => 
+// const getNamesSortedByFriendCount = users =>
 // [...users].sort((firstUser, secondUser) => secondUser.friends.length - firstUser.friends.length)
 //     .map(user => user.name);
 // console.log(getNamesSortedByFriendCount(users));
   
-// const getTotalBalanceByGender = (users, gender) => 
+// const getTotalBalanceByGender = (users, gender) =>
 // users.filter(user => user.gender === gender)
 //   .reduce((acc, user) => acc + user.balance, 0);
 
 //   console.log(getTotalBalanceByGender(users, 'male'));
 
-class Storage {
-  constructor(items) {
-     this.items = items;
-  }
-  getItems() {
-    return this.items
-  }
+// class Storage {
+//   constructor(items) {
+//      this.items = items;
+//   }
+//   getItems() {
+//     return this.items
+//   }
 
-  addItem(newItem) {
-    return this.items.push(newItem)
-  }
+//   addItem(newItem) {
+//     return this.items.push(newItem)
+//   }
 
-  removeItem(itemToRemove) {
-    const elem =
-      this.items.filter(item => (item !== itemToRemove));
-    return elem
+//   removeItem(itemToRemove) {
+//  this.items = this.items.filter(item => (item !== itemToRemove));
+
+//     // const id = this.items.findIndex(item => item === itemToRemove);
+//     // return this.items.splice(id, 1)
+//   }
+// }
+
+
+// // Change code above this line
+// const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
+// storage.addItem("Droid");
+// console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
+// storage.removeItem("Prolonger");
+// console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+
+// class Car {
+//   // Change code below this line
+
+//   static MAX_PRICE = 50000;
+  
+//   #price;
+
+//   constructor({ price }) {
+//     this.#price = price;
+//   }
+
+//   get price() {
+//     return this.#price;
+//   }
+
+//   set price(newPrice) {
+//     if(newPrice < Car.MAX_PRICE) {
+//      this.#price = newPrice;
+//     }
+       
+//   }
+//   // Change code above this line
+// }
+
+// const audi = new Car({ price: 35000 });
+// console.log(audi.price); // 35000
+
+// audi.price = 49000;
+// console.log(audi.price); // 49000
+
+// audi.price = 51000;
+// console.log(audi.price); // 49000
+
+// class User {
+//   static #takenEmails = [];
+
+//   static isEmailTaken(email) {
+//     return User.#takenEmails.includes(email);
+//   }
+
+//   #email;
+
+//   constructor({ email }) {
+//     this.#email = email;
+//     User.#takenEmails.push(email);
+//   }
+// }
+
+// const mango = new User({ email: "mango@mail.com" });
+
+// console.log(User.isEmailTaken("poly@mail.com"));
+// console.log(User.isEmailTaken("mango@mail.com"));
+
+// class Car {
+//   static #MAX_PRICE = 50000;
+//   // Change code below this line
+// static checkPrice (price) {
+//   if(price > Car.#MAX_PRICE){
+//     return "Error! Price exceeds the maximum";
+//   }
+//  return "Success! Price is within acceptable limits";
+// }
+//   // Change code above this line
+//   constructor({ price }) {
+//     this.price = price;
+//   }
+// }
+
+// const audi = new Car({ price: 36000 });
+// const bmw = new Car({ price: 64000 });
+
+// console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
+// console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
+
+// Додаткове завдання
+// Напишіть клас Toggle який приймає об'єкт налаштувань {isOpen: boolean} і оголошує одну властивість on - стан вкл/викл (true/false). За замовчуванням значення властивості on повинно бути false.
+
+class Toggle {
+  constructor({isOpen: boolean}) {
+    this.isOpen = boolean;
+    this.on = false;
   }
 }
 
+const firstToggle = new Toggle({ isOpen: true });
+console.log(firstToggle.isOpen);
+console.group('firstToggle');
+console.log(firstToggle.on);
+console.log(firstToggle.toggle);
+console.log(firstToggle.on);
+console.groupEnd('firstToggle');
 
-// Change code above this line
-const storage = new Storage(["Nanitoids", "Prolonger", "Antigravitator"]);
-console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator"]
-storage.addItem("Droid");
-console.log(storage.getItems()); // ["Nanitoids", "Prolonger", "Antigravitator", "Droid"]
-storage.removeItem("Prolonger");
-console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+const secondToggle = new Toggle();
+console.group('secondToggle');
+console.log(secondToggle.on);
+secondToggle.toggle();
+console.log(secondToggle.on);
+console.groupEnd('secondToggle');
 
+// console.log("This is the outer level");
+// console.group();
+// console.log("Level 2");
+// console.group();
+// console.log("Level 3");
+// console.warn("More of level 3");
+// console.groupEnd();
+// console.log("Back to level 2");
+// console.groupEnd();
+// console.log("Back to the outer level");
