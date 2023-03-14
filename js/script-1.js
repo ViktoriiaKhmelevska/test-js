@@ -1353,5 +1353,40 @@ const d = new Date();
 // const year = d.getFullYear();
 // console.log(year);
 const nYear = d.setFullYear(2020);
-console.log(nYear);
+// console.log(nYear);
 
+function basicOp(operation, value1, value2) {
+  switch (operation) {
+    case '+':
+      return (value1 + value2);
+      break;
+    case '-':
+      return (value1 - value2);
+      break;
+    case '*':
+      return (value1 * value2);
+      break;
+    case '/':
+  return (value1 / value2);
+      break;
+    default:
+      console.log("Sorry, incorrect operation");
+  }
+}
+// console.log(basicOp('+', 4, 7));
+
+function stringToArray(string){
+  return string.split(' ');
+	// code code code
+}
+// console.log(stringToArray("Robin Singh"));
+
+function findNeedle(haystack) {
+  for(let elem in haystack)
+    if (haystack[elem] === "needle") {
+    return `found the needle at position ${[--elem]}`
+    }
+  return
+}
+// console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]));
+// console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]));
