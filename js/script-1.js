@@ -1375,18 +1375,53 @@ function basicOp(operation, value1, value2) {
 }
 // console.log(basicOp('+', 4, 7));
 
-function stringToArray(string){
-  return string.split(' ');
+// function stringToArray(string){
+//   return string.split(' ');
 	// code code code
-}
+  // }
 // console.log(stringToArray("Robin Singh"));
 
-function findNeedle(haystack) {
-  for(let elem in haystack)
-    if (haystack[elem] === "needle") {
-    return `found the needle at position ${[--elem]}`
-    }
-  return
+// function findNeedle(haystack) {
+//   for(let elem in haystack)
+//     if (haystack[elem] === "needle") {
+//     return `found the needle at position ${[--elem]}`
+//     }
+//   return
+// }
+// console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]));
+// console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]));
+
+// const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+//   return (distanceToPump < (fuelLeft * mpg))
+// }
+// console.log(zeroFuel(45, 25, 2));
+
+
+// function century(year) {
+//   return Math.ceil(year / 100);
+// }
+// console.log(century(1705));
+
+// function solution(str) {
+//   const newStr = str.split(``).reverse().join(``)
+//     console.log(newStr)
+//     // .reverse.join;
+//   return newStr;
+// }
+// console.log(solution('world'));
+
+function countSheeps(arrayOfSheep){
+let num=0;
+  for (let i = 0; i < arrayOfSheep.length; i+=1){
+  if (arrayOfSheep[i]) {
+    num += 1;
+  }
 }
-// console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]));
-// console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]));
+return num
+}
+console.log(countSheeps([true,  true,  true,  false,
+  true,  true,  true,  true ,
+  true,  false, true,  false,
+  true,  false, false, true ,
+  true,  true,  true,  true ,
+  false, false, true,  true]))
