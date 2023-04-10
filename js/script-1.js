@@ -1355,24 +1355,24 @@ const d = new Date();
 const nYear = d.setFullYear(2020);
 // console.log(nYear);
 
-function basicOp(operation, value1, value2) {
-  switch (operation) {
-    case '+':
-      return (value1 + value2);
-      break;
-    case '-':
-      return (value1 - value2);
-      break;
-    case '*':
-      return (value1 * value2);
-      break;
-    case '/':
-  return (value1 / value2);
-      break;
-    default:
-      console.log("Sorry, incorrect operation");
-  }
-}
+// function basicOp(operation, value1, value2) {
+//   switch (operation) {
+//     case '+':
+//       return (value1 + value2);
+//       break;
+//     case '-':
+//       return (value1 - value2);
+//       break;
+//     case '*':
+//       return (value1 * value2);
+//       break;
+//     case '/':
+//   return (value1 / value2);
+//       break;
+//     default:
+//       console.log("Sorry, incorrect operation");
+//   }
+// }
 // console.log(basicOp('+', 4, 7));
 
 // function stringToArray(string){
@@ -1410,18 +1410,122 @@ function basicOp(operation, value1, value2) {
 // }
 // console.log(solution('world'));
 
-function countSheeps(arrayOfSheep){
-let num=0;
-  for (let i = 0; i < arrayOfSheep.length; i+=1){
-  if (arrayOfSheep[i]) {
-    num += 1;
+// function countSheeps(arrayOfSheep){
+// let num=0;
+//   for (let i = 0; i < arrayOfSheep.length; i+=1){
+//   if (arrayOfSheep[i]) {
+//     num += 1;
+//   }
+// }
+// return num
+// }
+// console.log(countSheeps([true,  true,  true,  false,
+//   true,  true,  true,  true ,
+//   true,  false, true,  false,
+//   true,  false, false, true ,
+//   true,  true,  true,  true ,
+//   false, false, true,  true]))
+
+//   const date = new Date();
+
+// console.log(date);
+// // "Fri Jun 18 2021 15:01:35 GMT+0300 (Eastern European Summer Time)"
+
+// console.log(date.toString());
+// // "Fri Jun 18 2021 15:01:35 GMT+0300 (Eastern European Summer Time)"
+// const fetchUserFromServer = (username, onSuccess, onError) => {
+//   console.log(`Fetching data for ${username}`);
+
+//   setTimeout(() => {
+//     // Change value of isSuccess variable to simulate request status
+//     const isSuccess = true;
+
+//     if (isSuccess) {
+//       onSuccess("success value");
+//     } else {
+//       onError("error");
+//     }
+//   }, 2000);
+// };
+
+// const onFetchSuccess = user => {
+//   console.log(user);
+// };
+
+// const onFetchError = error => {
+//   console.error(error);
+// };
+
+// fetchUserFromServer("Mango", onFetchSuccess, onFetchError);
+
+
+// const fetchUserFromServer = username => {
+//   return new Promise((resolve, reject) => {
+//     console.log(`Fetching data for ${username}`);
+
+//     setTimeout(() => {
+//       // Change value of isSuccess variable to simulate request status
+//       const isSuccess = true;
+
+//       if (isSuccess) {
+//         resolve("success value");
+//       } else {
+//         reject("error");
+//       }
+//     }, 2000);
+//   });
+// };
+
+// fetchUserFromServer("Mango")
+//   .then(user => console.log(user))
+//   .catch(error => console.error(error));
+
+//   const makePromise = (text, delay) => {
+//   return new Promise(resolve => {
+//     setTimeout(() => resolve(text), delay);
+//   });
+// };
+
+// const promiseA = makePromise("promiseA value", 1000);
+// const promiseB = makePromise("promiseB value", 3000);
+
+// Promise.all([promiseA, promiseB])
+//   .then(value => console.log(value)) //["promiseA value", "promiseB value"]
+//   .catch(error => console.log(error));
+
+
+//   // Fulfilled promise
+// new Promise(resolve => resolve("success value")).then(value =>
+//   console.log(value)
+// );
+
+// Promise.resolve("success value").then(value => console.log(value));
+
+// // Rejected promise
+// new Promise((resolve, reject) => reject("error")).catch(error =>
+//   console.error(error)
+// );
+
+// Promise.reject("error").catch(error => console.error(error));
+
+const makeGreeting = guestName => {
+  if (guestName === "" || guestName === undefined) {
+    return {
+      success: false,
+      message: "Guest name must not be empty",
+    };
   }
+
+  return {
+    success: true,
+    message: `Welcome ${guestName}`,
+  };
+};
+
+const result = makeGreeting("Mango");
+
+if (result.success) {
+  console.log(result.message);
+} else {
+  console.error(result.message);
 }
-return num
-}
-console.log(countSheeps([true,  true,  true,  false,
-  true,  true,  true,  true ,
-  true,  false, true,  false,
-  true,  false, false, true ,
-  true,  true,  true,  true ,
-  false, false, true,  true]))
