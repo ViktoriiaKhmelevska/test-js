@@ -1283,249 +1283,361 @@ const users = [
 
 // Отримати масив імен усіх користувачів (поле name).
 
-const getUserNames = users => users.map(users => users.name);
+// const getUserNames = users => users.map(users => users.name);
 
-// console.log(getUserNames(users))
-// [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
+// // console.log(getUserNames(users))
+// // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
 
-// Task 2
+// // Task 2
 
-// Отримати масив об'єктів користувачей по кольору очей (поле eyeColor).
-const getUsersWithEyeColor = (users, color) => users.filter(users => users.eyeColor === color);
+// // Отримати масив об'єктів користувачей по кольору очей (поле eyeColor).
+// const getUsersWithEyeColor = (users, color) => users.filter(users => users.eyeColor === color);
     
-// console.log(getUsersWithEyeColor(users, 'blue')); // [об'є'кт Moore Hensley, об'єкт Sharlene Bush, об'єкт Carey Barr]
+// // console.log(getUsersWithEyeColor(users, 'blue')); // [об'є'кт Moore Hensley, об'єкт Sharlene Bush, об'єкт Carey Barr]
 
-// Task 3
+// // Task 3
 
-// Отримати загальну суму баланса (поле balance) усіх користувачів.
-const calculateTotalBalance = users => users.reduce((sum, user) => sum + user.balance, 0);
-// console.log(calculateTotalBalance(users)); // 20916
+// // Отримати загальну суму баланса (поле balance) усіх користувачів.
+// const calculateTotalBalance = users => users.reduce((sum, user) => sum + user.balance, 0);
+// // console.log(calculateTotalBalance(users)); // 20916
 
-// Task 4
+// // Task 4
 
-// Отримати масив імен користувачів по полю (поле gender)
-const getUsersWithGender = (users, genderType) => users.filter(users => users.gender === genderType).map(users => users.name);
+// // Отримати масив імен користувачів по полю (поле gender)
+// const getUsersWithGender = (users, genderType) => users.filter(users => users.gender === genderType).map(users => users.name);
 
-// console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
+// // console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 
 
-const arr = [1, -3, -5, -2];
+// const arr = [1, -3, -5, -2];
 
-// Дан массив с числами. Сделайте из него массив, состоящий из квадратов этих чисел.
-// console.log([1, 3, 5, 2].map(elem => elem * elem));
+// // Дан массив с числами. Сделайте из него массив, состоящий из квадратов этих чисел.
+// // console.log([1, 3, 5, 2].map(elem => elem * elem));
 
-//  Дан массив с числами. Найдите сумму этих чисел
-function summary(arr) {
-  let sum = 0;
-  arr.forEach(element => {
-    sum += element;
-  });
-return sum;
-}
-// console.log(summary(arr));
+// //  Дан массив с числами. Найдите сумму этих чисел
+// function summary(arr) {
+//   let sum = 0;
+//   arr.forEach(element => {
+//     sum += element;
+//   });
+// return sum;
+// }
+// // console.log(summary(arr));
 
-// Дан массив с числами.Проверьте то, что все элементы в массиве больше нуля
-const everyPozitive = arr => {
-  const res = arr.every(arr => arr > 0);
-  console.log(res);
-  if (res) {
-    return "ALL element positive"
-  }
- return "ERROR. NOT ALL element positive"
-}
-// console.log(everyPozitive(arr));
+// // Дан массив с числами.Проверьте то, что все элементы в массиве больше нуля
+// const everyPozitive = arr => {
+//   const res = arr.every(arr => arr > 0);
+//   console.log(res);
+//   if (res) {
+//     return "ALL element positive"
+//   }
+//  return "ERROR. NOT ALL element positive"
+// }
+// // console.log(everyPozitive(arr));
 
-//  Дан массив с числами. Проверьте то, что в нем есть отрицательные элементы
-const notEveryPozitive = arr => arr.some(arr => arr < 0) ? "Є відємні" : "Всі додатні";
-// console.log(notEveryPozitive(arr));
+// //  Дан массив с числами. Проверьте то, что в нем есть отрицательные элементы
+// const notEveryPozitive = arr => arr.some(arr => arr < 0) ? "Є відємні" : "Всі додатні";
+// // console.log(notEveryPozitive(arr));
 
-// Дан массив с числами. Посчитайте количество отрицательных чисел в этом массиве.
-// const negative = arr => arr.filter(elem => elem < 0).length;
-// console.log(negative(arr));
-// console.log(arr.filter(elem => elem < 0).length);
+// // Дан массив с числами. Посчитайте количество отрицательных чисел в этом массиве.
+// // const negative = arr => arr.filter(elem => elem < 0).length;
+// // console.log(negative(arr));
+// // console.log(arr.filter(elem => elem < 0).length);
 
-// document.getElementById("demo").innerHTML = myFunction();
+// // document.getElementById("demo").innerHTML = myFunction();
+
+// // const d = new Date();
+// // alert(d);
 
 // const d = new Date();
-// alert(d);
+// // const year = d.getFullYear();
+// // console.log(year);
+// const nYear = d.setFullYear(2020);
+// // console.log(nYear);
 
-const d = new Date();
-// const year = d.getFullYear();
-// console.log(year);
-const nYear = d.setFullYear(2020);
-// console.log(nYear);
+// // function basicOp(operation, value1, value2) {
+// //   switch (operation) {
+// //     case '+':
+// //       return (value1 + value2);
+// //       break;
+// //     case '-':
+// //       return (value1 - value2);
+// //       break;
+// //     case '*':
+// //       return (value1 * value2);
+// //       break;
+// //     case '/':
+// //   return (value1 / value2);
+// //       break;
+// //     default:
+// //       console.log("Sorry, incorrect operation");
+// //   }
+// // }
+// // console.log(basicOp('+', 4, 7));
 
-// function basicOp(operation, value1, value2) {
-//   switch (operation) {
-//     case '+':
-//       return (value1 + value2);
-//       break;
-//     case '-':
-//       return (value1 - value2);
-//       break;
-//     case '*':
-//       return (value1 * value2);
-//       break;
-//     case '/':
-//   return (value1 / value2);
-//       break;
-//     default:
-//       console.log("Sorry, incorrect operation");
+// // function stringToArray(string){
+// //   return string.split(' ');
+// 	// code code code
+//   // }
+// // console.log(stringToArray("Robin Singh"));
+
+// // function findNeedle(haystack) {
+// //   for(let elem in haystack)
+// //     if (haystack[elem] === "needle") {
+// //     return `found the needle at position ${[--elem]}`
+// //     }
+// //   return
+// // }
+// // console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]));
+// // console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]));
+
+// // const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+// //   return (distanceToPump < (fuelLeft * mpg))
+// // }
+// // console.log(zeroFuel(45, 25, 2));
+
+
+// // function century(year) {
+// //   return Math.ceil(year / 100);
+// // }
+// // console.log(century(1705));
+
+// // function solution(str) {
+// //   const newStr = str.split(``).reverse().join(``)
+// //     console.log(newStr)
+// //     // .reverse.join;
+// //   return newStr;
+// // }
+// // console.log(solution('world'));
+
+// // function countSheeps(arrayOfSheep){
+// // let num=0;
+// //   for (let i = 0; i < arrayOfSheep.length; i+=1){
+// //   if (arrayOfSheep[i]) {
+// //     num += 1;
+// //   }
+// // }
+// // return num
+// // }
+// // console.log(countSheeps([true,  true,  true,  false,
+// //   true,  true,  true,  true ,
+// //   true,  false, true,  false,
+// //   true,  false, false, true ,
+// //   true,  true,  true,  true ,
+// //   false, false, true,  true]))
+
+// //   const date = new Date();
+
+// // console.log(date);
+// // // "Fri Jun 18 2021 15:01:35 GMT+0300 (Eastern European Summer Time)"
+
+// // console.log(date.toString());
+// // // "Fri Jun 18 2021 15:01:35 GMT+0300 (Eastern European Summer Time)"
+// // const fetchUserFromServer = (username, onSuccess, onError) => {
+// //   console.log(`Fetching data for ${username}`);
+
+// //   setTimeout(() => {
+// //     // Change value of isSuccess variable to simulate request status
+// //     const isSuccess = true;
+
+// //     if (isSuccess) {
+// //       onSuccess("success value");
+// //     } else {
+// //       onError("error");
+// //     }
+// //   }, 2000);
+// // };
+
+// // const onFetchSuccess = user => {
+// //   console.log(user);
+// // };
+
+// // const onFetchError = error => {
+// //   console.error(error);
+// // };
+
+// // fetchUserFromServer("Mango", onFetchSuccess, onFetchError);
+
+
+// // const fetchUserFromServer = username => {
+// //   return new Promise((resolve, reject) => {
+// //     console.log(`Fetching data for ${username}`);
+
+// //     setTimeout(() => {
+// //       // Change value of isSuccess variable to simulate request status
+// //       const isSuccess = true;
+
+// //       if (isSuccess) {
+// //         resolve("success value");
+// //       } else {
+// //         reject("error");
+// //       }
+// //     }, 2000);
+// //   });
+// // };
+
+// // fetchUserFromServer("Mango")
+// //   .then(user => console.log(user))
+// //   .catch(error => console.error(error));
+
+// //   const makePromise = (text, delay) => {
+// //   return new Promise(resolve => {
+// //     setTimeout(() => resolve(text), delay);
+// //   });
+// // };
+
+// // const promiseA = makePromise("promiseA value", 1000);
+// // const promiseB = makePromise("promiseB value", 3000);
+
+// // Promise.all([promiseA, promiseB])
+// //   .then(value => console.log(value)) //["promiseA value", "promiseB value"]
+// //   .catch(error => console.log(error));
+
+
+// //   // Fulfilled promise
+// // new Promise(resolve => resolve("success value")).then(value =>
+// //   console.log(value)
+// // );
+
+// // Promise.resolve("success value").then(value => console.log(value));
+
+// // // Rejected promise
+// // new Promise((resolve, reject) => reject("error")).catch(error =>
+// //   console.error(error)
+// // );
+
+// // Promise.reject("error").catch(error => console.error(error));
+
+// const makeGreeting = guestName => {
+//   if (guestName === "" || guestName === undefined) {
+//     return {
+//       success: false,
+//       message: "Guest name must not be empty",
+//     };
 //   }
-// }
-// console.log(basicOp('+', 4, 7));
 
-// function stringToArray(string){
-//   return string.split(' ');
-	// code code code
+//   return {
+//     success: true,
+//     message: `Welcome ${guestName}`,
+//   };
+// };
+
+// const result = makeGreeting("Mango");
+
+// if (result.success) {
+//   console.log(result.message);
+// } else {
+//   console.error(result.message);
+// }
+
+/*
+* @param1 {string}: Required, title text in string format.
+* @param2 {string}: Required, message text in string format.
+* @param3 {string}: Required, button text in string format.
+* @param4 {function | Object}: Optional, a callback function that will be called when the button element has been clicked. Or, extending the initialize options with the new options for each notification element.
+* @param5 {Object}: Optional, extending the initialize options with new the options for each notification element. (If the fourth parameter has been already used for a callback function.)
+*/
+
+// e.g. Only title, message, and button text
+Notiflix.Report.success('Title', 'Message', 'Button Text');
+
+Notiflix.Report.failure('Title', 'Message', 'Button Text');
+
+Notiflix.Report.warning('Title', 'Message', 'Button Text');
+
+Notiflix.Report.info('Title', 'Message', 'Button Text');
+
+// e.g. With a callback
+Notiflix.Report.success(
+  'Title',
+  'Message',
+  'Button Text',
+  function cb() {
+    // callback
+  },
+);
+
+// e.g. With the new options
+Notiflix.Report.success(
+  'Title',
+  'Message',
+  'Button Text',
+  {
+    width: '360px',
+    svgSize: '120px',
+  },
+);
+
+// e.g. With a callback, and the new options
+Notiflix.Report.success(
+  'Title',
+  'Message',
+  'Button Text',
+  function cb() {
+    // callback
+  },
+  {
+    width: '360px',
+    svgSize: '120px',
+  },
+);
+
+////// project books
+
+// function supportItemsId(arr) {
+//   const copyArr = [...arr];
+//    const result = copyArr.map((el) => {
+//      el["id"] = "fond";
+//            return el;
+//         });
+//         return result;
+// }
+// supportItemsId(supportItems);
+
+
+  // for (let i = 0; i < arr3.length; i++ ) {
+  //   arr3[i].id2 = indexOff(arr3);
+  //   console.log(arr3[i].id2);
   // }
-// console.log(stringToArray("Robin Singh"));
 
-// function findNeedle(haystack) {
-//   for(let elem in haystack)
-//     if (haystack[elem] === "needle") {
-//     return `found the needle at position ${[--elem]}`
-//     }
-//   return
+  
+//  swiper.enable();
+
+// function arrCopy(obj) {
+//   return JSON.parse(JSON.stringify(obj));
 // }
-// console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]));
-// console.log(findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"]));
+// const arr3 = arrCopy(supportItems);
 
-// const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
-//   return (distanceToPump < (fuelLeft * mpg))
-// }
-// console.log(zeroFuel(45, 25, 2));
+const swiper = new Swiper('.swiper', {
+  direction: 'vertical',
+  // breakpointsBase: container,
+  centeredSlidesBounds: true,
+    loop: true,
+  //  effect: 'flip',
+  cssMode: true,
+  slidesPerView: 0,
+  spaceBetween: 10,
 
-
-// function century(year) {
-//   return Math.ceil(year / 100);
-// }
-// console.log(century(1705));
-
-// function solution(str) {
-//   const newStr = str.split(``).reverse().join(``)
-//     console.log(newStr)
-//     // .reverse.join;
-//   return newStr;
-// }
-// console.log(solution('world'));
-
-// function countSheeps(arrayOfSheep){
-// let num=0;
-//   for (let i = 0; i < arrayOfSheep.length; i+=1){
-//   if (arrayOfSheep[i]) {
-//     num += 1;
-//   }
-// }
-// return num
-// }
-// console.log(countSheeps([true,  true,  true,  false,
-//   true,  true,  true,  true ,
-//   true,  false, true,  false,
-//   true,  false, false, true ,
-//   true,  true,  true,  true ,
-//   false, false, true,  true]))
-
-//   const date = new Date();
-
-// console.log(date);
-// // "Fri Jun 18 2021 15:01:35 GMT+0300 (Eastern European Summer Time)"
-
-// console.log(date.toString());
-// // "Fri Jun 18 2021 15:01:35 GMT+0300 (Eastern European Summer Time)"
-// const fetchUserFromServer = (username, onSuccess, onError) => {
-//   console.log(`Fetching data for ${username}`);
-
-//   setTimeout(() => {
-//     // Change value of isSuccess variable to simulate request status
-//     const isSuccess = true;
-
-//     if (isSuccess) {
-//       onSuccess("success value");
-//     } else {
-//       onError("error");
-//     }
-//   }, 2000);
-// };
-
-// const onFetchSuccess = user => {
-//   console.log(user);
-// };
-
-// const onFetchError = error => {
-//   console.error(error);
-// };
-
-// fetchUserFromServer("Mango", onFetchSuccess, onFetchError);
-
-
-// const fetchUserFromServer = username => {
-//   return new Promise((resolve, reject) => {
-//     console.log(`Fetching data for ${username}`);
-
-//     setTimeout(() => {
-//       // Change value of isSuccess variable to simulate request status
-//       const isSuccess = true;
-
-//       if (isSuccess) {
-//         resolve("success value");
-//       } else {
-//         reject("error");
-//       }
-//     }, 2000);
-//   });
-// };
-
-// fetchUserFromServer("Mango")
-//   .then(user => console.log(user))
-//   .catch(error => console.error(error));
-
-//   const makePromise = (text, delay) => {
-//   return new Promise(resolve => {
-//     setTimeout(() => resolve(text), delay);
-//   });
-// };
-
-// const promiseA = makePromise("promiseA value", 1000);
-// const promiseB = makePromise("promiseB value", 3000);
-
-// Promise.all([promiseA, promiseB])
-//   .then(value => console.log(value)) //["promiseA value", "promiseB value"]
-//   .catch(error => console.log(error));
-
-
-//   // Fulfilled promise
-// new Promise(resolve => resolve("success value")).then(value =>
-//   console.log(value)
-// );
-
-// Promise.resolve("success value").then(value => console.log(value));
-
-// // Rejected promise
-// new Promise((resolve, reject) => reject("error")).catch(error =>
-//   console.error(error)
-// );
-
-// Promise.reject("error").catch(error => console.error(error));
-
-const makeGreeting = guestName => {
-  if (guestName === "" || guestName === undefined) {
-    return {
-      success: false,
-      message: "Guest name must not be empty",
-    };
-  }
-
-  return {
-    success: true,
-    message: `Welcome ${guestName}`,
-  };
-};
-
-const result = makeGreeting("Mango");
-
-if (result.success) {
-  console.log(result.message);
-} else {
-  console.error(result.message);
-}
+    breakpoints: {
+    320: {
+      slidesPerView: 4,
+      spaceBetween: 20
+    },
+    768: {
+      slidesPerView: 6,
+      spaceBetween: 20
+    },
+  },
+      navigation: {
+    nextEl: arrowNext,
+    // prevEl: '.swiper-button-prev',
+  },
+  //            pagination: {
+  //   el: '.swiper-pagination',
+  //   type: 'bullets',
+  // },
+       scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+  },
+ });
